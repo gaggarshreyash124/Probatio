@@ -14,5 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerData
   speed: 10
   sprintSpeed: 20
-  jumpForce: 14.72
-  gravity: -23.88
+  jumpForce: 24.7
+  gravity: -80
+  velocity: {x: 0, y: -130.30576, z: 0}
+  isGrounded: 0
+  isSprinting: 0
+  GrapplePoint: {x: 0, y: 0, z: 0}
+  GrappleRadius: 54.96
+  GrappleDistance: 53.11
+  grapplePoint: {x: -12.004429, y: 1.085, z: 46.200974}
+  grappleLaunchVelocity: {x: 1.3902389, y: 50, z: 49.980667}
+  grappleStopDistance: 1.5
+  isgrappleing: 0
+  GrappleMask:
+    serializedVersion: 2
+    m_Bits: 64
+  Counter: 1.5066442
+  mass: 65
+  dragCoeff: 1
+  area: 0.5

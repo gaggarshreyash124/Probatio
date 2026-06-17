@@ -6,6 +6,7 @@ public class PlayerInputHandler : MonoBehaviour
     public Vector2 MoveInput;
     public bool SprintInput;
     public bool JumpInput;
+    public bool grapple;
 
     void Awake()
     {
@@ -32,5 +33,8 @@ public class PlayerInputHandler : MonoBehaviour
 
         Inputs.Player.Jump.performed += ctx => JumpInput = true;
         Inputs.Player.Jump.canceled += ctx => JumpInput = false;
+        
+        Inputs.Player.Grapple.performed += ctx => grapple = true;
+        Inputs.Player.Grapple.canceled += ctx => grapple = false;
     }
 }
