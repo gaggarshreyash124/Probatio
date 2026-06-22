@@ -1,3 +1,4 @@
+
 using Unity.Cinemachine;
 using UnityEngine;
 
@@ -6,6 +7,7 @@ public class PlayerMovementHandler : MonoBehaviour
     CharacterController controller;
     [SerializeField] CinemachineCamera playerWalkCamera;
     PlayerInputHandler inputHandler;
+    public  AnimationController animController;
     
     public PlayerData Data;
     
@@ -34,16 +36,24 @@ public class PlayerMovementHandler : MonoBehaviour
 
     
     
-    void Start()
+    void Awake()
     {
-        Data.velocity = Vector3.zero;
-        
+        animController = GetComponent<AnimationController>();
         inputHandler = GetComponent<PlayerInputHandler>();
         controller = GetComponent<CharacterController>();
     }
+
+    private void Start()
+    {
+        Data.velocity = Vector3.zero;
+        Data.isgrappleing = false;
+        
+    }
+
     void Update()
     {
         Data.isGrounded = controller.isGrounded;
+        
         if (Data.isGrounded && Data.velocity.y < 0) Data.velocity.y = -2f;
 
         if (!Data.isgrappleing)
@@ -59,6 +69,9 @@ public class PlayerMovementHandler : MonoBehaviour
             StartGrapple();
         else
             HandleMove();
+        
+        
+        
     }
 
     public void HandleMove()
@@ -68,11 +81,18 @@ public class PlayerMovementHandler : MonoBehaviour
 
         // Heavier = slower, tune the divisor to feel right
         float massMultiplier = 1f / (1f + Data.mass * 0.01f);
+        
+        if (inputHandler.MoveInput == Vector2.zero)
+        {
+            Data.currentSpeed = 0;
+        }
+        else
+        {
+            Data.currentSpeed = Data.isSprinting ? Data.sprintSpeed : Data.speed;
+            Data.currentSpeed *= massMultiplier;
+        }
 
-        float currentSpeed = Data.isSprinting ? Data.sprintSpeed : Data.speed;
-        currentSpeed *= massMultiplier;
-
-        controller.Move(moveDir * currentSpeed * Time.deltaTime);
+        controller.Move(moveDir * Data.currentSpeed * Time.deltaTime);
     }
 
     public void Grapple()
@@ -97,12 +117,11 @@ public class PlayerMovementHandler : MonoBehaviour
 
                         Data.grappleLaunchVelocity = flatDirection * GrapplePoints.speed 
                                                 + Vector3.up * GrapplePoints.ySpeed;
-
+                        Data.Timeleft = GrapplePoints.Time;
                         // Override current velocity so gravity arc starts fresh
-                        Data.velocity = Data.grappleLaunchVelocity;
 
-                        Data.Counter = 0;
-                        Data.isgrappleing = true;
+                        
+                        animController.anim.SetTrigger("Grapple");
                     }
                 }
             }
@@ -110,6 +129,7 @@ public class PlayerMovementHandler : MonoBehaviour
     }
     public void StartGrapple()
     {
+        
         // Let gravity naturally pull the arc down
         Data.velocity.y += Data.gravity * Time.deltaTime;
         Data.velocity.y = Mathf.Clamp(Data.velocity.y, -TerminalVelocity(), Mathf.Infinity);
@@ -121,7 +141,7 @@ public class PlayerMovementHandler : MonoBehaviour
         float distanceToPoint = Vector3.Distance(transform.position, Data.grapplePoint);
 
         // Stop when close enough OR time runs out
-        if (distanceToPoint < Data.grappleStopDistance || Data.Counter > GrapplePoints.Time)
+        if (distanceToPoint < Data.grappleStopDistance || Data.Counter > Data.Timeleft)
         {
             Data.isgrappleing = false;
             GrapplePoints = null;

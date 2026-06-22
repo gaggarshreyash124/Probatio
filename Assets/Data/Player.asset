@@ -16,20 +16,21 @@ MonoBehaviour:
   sprintSpeed: 20
   jumpForce: 24.7
   gravity: -80
-  velocity: {x: 0, y: -130.30576, z: 0}
-  isGrounded: 0
+  velocity: {x: 0, y: -2.3968883, z: 0}
+  currentSpeed: 0
+  isGrounded: 1
   isSprinting: 0
   GrapplePoint: {x: 0, y: 0, z: 0}
-  GrappleRadius: 54.96
-  GrappleDistance: 53.11
+  GrappleRadius: 93.4
+  GrappleDistance: 100
   grapplePoint: {x: -12.004429, y: 1.085, z: 46.200974}
-  grappleLaunchVelocity: {x: 1.3902389, y: 50, z: 49.980667}
+  grappleLaunchVelocity: {x: -12.429448, y: 50, z: -48.430454}
   grappleStopDistance: 1.5
   isgrappleing: 0
   GrappleMask:
     serializedVersion: 2
     m_Bits: 64
-  Counter: 1.5066442
-  mass: 65
+  Counter: 1.5072342
+  mass: 10
   dragCoeff: 1
   area: 0.5

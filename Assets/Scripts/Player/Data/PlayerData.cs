@@ -9,6 +9,8 @@ public class PlayerData : ScriptableObject
     public float jumpForce = 5f;
     public float gravity = -9.81f;
     public Vector3 velocity;
+
+    public float currentSpeed;
     public bool isGrounded;
     public bool isSprinting;
 
@@ -20,6 +22,7 @@ public class PlayerData : ScriptableObject
     public Vector3 grapplePoint;
     public Vector3 grappleLaunchVelocity;
     public float grappleStopDistance = 1.5f;
+    public float Timeleft;
     
     public bool isgrappleing = false;
     

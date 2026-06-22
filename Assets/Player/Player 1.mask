@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player 1
+  m_Mask: 00000000010000000100000000000000000000000100000001000000010000000100000000000000000000000000000000000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Armature
+    m_Weight: 1
+  - m_Path: Armature/pelvis
+    m_Weight: 1
+  - m_Path: Armature/pelvis/spine
+    m_Weight: 1
+  - m_Path: Armature/pelvis/spine/spine.02
+    m_Weight: 1
+  - m_Path: Armature/pelvis/spine/spine.02/spine.03
+    m_Weight: 1
+  - m_Path: Armature/pelvis/spine/spine.02/spine.03/clavicle.l
+    m_Weight: 1
+  - m_Path: Armature/pelvis/spine/spine.02/spine.03/clavicle.l/upper_arm.l
+    m_Weight: 1
+  - m_Path: Armature/pelvis/spine/spine.02/spine.03/clavicle.l/upper_arm.l/lower_arm.l
+    m_Weight: 1
+  - m_Path: Armature/pelvis/spine/spine.02/spine.03/clavicle.l/upper_arm.l/lower_arm.l/hand.l
+    m_Weight: 1
+  - m_Path: Armature/pelvis/spine/spine.02/spine.03/clavicle.l/upper_arm.l/lower_arm.l/lower_arm.01.l
+    m_Weight: 1
+  - m_Path: Armature/pelvis/spine/spine.02/spine.03/clavicle.l/upper_arm.l/lower_arm.l/lower_arm.02.l
+    m_Weight: 1
+  - m_Path: Armature/pelvis/spine/spine.02/spine.03/clavicle.l/upper_arm.l/lower_arm.l/lower_arm.02.l/arm_plates.l
+    m_Weight: 1
+  - m_Path: Armature/pelvis/spine/spine.02/spine.03/clavicle.l/upper_arm.l/upper_arm.01.l
+    m_Weight: 1
+  - m_Path: Armature/pelvis/spine/spine.02/spine.03/clavicle.l/upper_arm.l/upper_arm.01.l/shoulder_plates.l
+    m_Weight: 1
+  - m_Path: Armature/pelvis/spine/spine.02/spine.03/clavicle.l/upper_arm.l/upper_arm.02.l
+    m_Weight: 1
+  - m_Path: Armature/pelvis/spine/spine.02/spine.03/clavicle.r
+    m_Weight: 1
+  - m_Path: Armature/pelvis/spine/spine.02/spine.03/clavicle.r/upper_arm.r
+    m_Weight: 1
+  - m_Path: Armature/pelvis/spine/spine.02/spine.03/clavicle.r/upper_arm.r/lower_arm.r
+    m_Weight: 1
+  - m_Path: Armature/pelvis/spine/spine.02/spine.03/clavicle.r/upper_arm.r/lower_arm.r/hand.r
+    m_Weight: 1
+  - m_Path: Armature/pelvis/spine/spine.02/spine.03/clavicle.r/upper_arm.r/lower_arm.r/lower_arm.01.r
+    m_Weight: 1
+  - m_Path: Armature/pelvis/spine/spine.02/spine.03/clavicle.r/upper_arm.r/lower_arm.r/lower_arm.02.r
+    m_Weight: 1
+  - m_Path: Armature/pelvis/spine/spine.02/spine.03/clavicle.r/upper_arm.r/upper_arm.01.r
+    m_Weight: 1
+  - m_Path: Armature/pelvis/spine/spine.02/spine.03/clavicle.r/upper_arm.r/upper_arm.01.r/shoulder_plates.l.001
+    m_Weight: 1
+  - m_Path: Armature/pelvis/spine/spine.02/spine.03/clavicle.r/upper_arm.r/upper_arm.02.r
+    m_Weight: 1
+  - m_Path: Armature/pelvis/spine/spine.02/spine.03/neck
+    m_Weight: 1
+  - m_Path: Armature/pelvis/spine/spine.02/spine.03/neck/head
+    m_Weight: 1
+  - m_Path: Armature/pelvis/spine/spine.02/spine.03/neck/head/helmet
+    m_Weight: 1
+  - m_Path: Armature/pelvis/thigh.l
+    m_Weight: 1
+  - m_Path: Armature/pelvis/thigh.l/calf.l
+    m_Weight: 1
+  - m_Path: Armature/pelvis/thigh.l/calf.l/calf.01.l
+    m_Weight: 1
+  - m_Path: Armature/pelvis/thigh.l/calf.l/calf.02.l
+    m_Weight: 1
+  - m_Path: Armature/pelvis/thigh.l/calf.l/foot.l
+    m_Weight: 1
+  - m_Path: Armature/pelvis/thigh.l/calf.l/foot.l/toe.l
+    m_Weight: 1
+  - m_Path: Armature/pelvis/thigh.l/thigh.01.l
+    m_Weight: 1
+  - m_Path: Armature/pelvis/thigh.l/thigh.02.l
+    m_Weight: 1
+  - m_Path: Armature/pelvis/thigh.r
+    m_Weight: 1
+  - m_Path: Armature/pelvis/thigh.r/calf.r
+    m_Weight: 1
+  - m_Path: Armature/pelvis/thigh.r/calf.r/calf.01.r
+    m_Weight: 1
+  - m_Path: Armature/pelvis/thigh.r/calf.r/calf.02.r
+    m_Weight: 1
+  - m_Path: Armature/pelvis/thigh.r/calf.r/foot.r
+    m_Weight: 1
+  - m_Path: Armature/pelvis/thigh.r/calf.r/foot.r/toe.r
+    m_Weight: 1
+  - m_Path: Armature/pelvis/thigh.r/thigh.01.r
+    m_Weight: 1
+  - m_Path: Armature/pelvis/thigh.r/thigh.02.r
+    m_Weight: 1
+  - m_Path: BaseHuman
+    m_Weight: 1
+  - m_Path: chest_plate
+    m_Weight: 1
